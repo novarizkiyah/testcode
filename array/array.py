@@ -48,3 +48,17 @@ def count_even(numbbers):
     return count1
 result4 = count_even(numbbers)
 print(result4)
+
+def find_max_index(numbbers):
+    # Inisialisasi nilai maksimum dan indeksnya
+    max_value=numbbers[0]
+    max_index=0
+
+    # Loop melalui setiap elemen dalam array dimulai dari indeks 1
+    for i in range(1, len(numbbers)):
+        if numbbers[i] > max_value:
+            max_value = numbbers[i]
+            max_index=i
+    return max_index
+result5=find_max_index(numbbers)
+print(result5)
