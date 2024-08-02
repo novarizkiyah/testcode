@@ -1,6 +1,6 @@
 
 
-numbbers = [0, -2, -3, -5, 1, 3, 4, 6, 7, 5, 2]
+numbbers = [0, -2, -3, -5, 1, 3, 4, 6, 7, 5, 2, 14, 13, 45]
 
 def find_max(numbbers):
     # Inisialisasi nilai maksimum dengan nilai elemen pertama dalam array
@@ -38,3 +38,13 @@ def count_positife(numbbers):
 
 result3=count_positife(numbbers)
 print(result3)
+
+def count_even(numbbers):
+    count1 = 0
+
+    for a in numbbers:
+        if a % 2 == 0:
+            count1 += 1
+    return count1
+result4 = count_even(numbbers)
+print(result4)
