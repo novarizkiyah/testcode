@@ -1,15 +1,12 @@
+numbers = [-10, 15, -3, 8, -1, 20, -7, 0, 5]
 
-num = [1, 2, 3, 4, 5, 6, -2, 4, 0, -3,-6,-4]
+def pos_number(numbers):
+    simpan_number = []
 
-def pos(num):
-    pose = [0]
+    for number in numbers:
+        if number>0:
+            simpan_number.append(number)
+    return simpan_number
 
-    for number in num:
-        if number > 0:
-            pose.append(number)
-    return pose
-            
-
-result = pos(num)
-print(result)
-
+result12 = pos_number(numbers)
+print(result12)
