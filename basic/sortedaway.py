@@ -7,12 +7,3 @@
 
 Array_1 = [1, 3, 5, 7, 9]
 Array_2 = [2, 4, 6, 8, 10]
-
-def gabung(Array_1, Array_2):
-    result = []
-    i, j = 0, 0
-
-    while i < len(Array_1) and j <len(Array_2):
-        
-
-    return result
