@@ -1,0 +1,12 @@
+{
+    "person": {
+      "name": "Alice",
+      "age": 28,
+      "address": {
+        "street": "123 Main St",
+        "city": "Anytown",
+        "zipcode": "12345"
+      },
+      "hobbies": ["reading", "hiking", "photography"]
+    }
+  }

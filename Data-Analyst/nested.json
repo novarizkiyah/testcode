@@ -1,0 +1,14 @@
+{
+    "person": {
+        "name": "Nova",
+        "age" : 31,
+        "address": {
+            "street": "Vlinderstraat",
+            "city": "Rotterdam",
+            "zipcode" : "3061VJ"
+        }, 
+        "hobbies": ["reading", "hiking", "photography"]
+    }
+}
+
+
