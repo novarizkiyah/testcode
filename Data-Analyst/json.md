@@ -11,5 +11,14 @@ JSON syntax rules:
 3. Brace keriting {} hold object
 4. Braket kotak [] hold array
 5. Nama harus string, ditulis dengan tanda petik dua ""
-
 contoh example.json
+
+JSON tipe data:
+a. String : "Hello World"
+b. Numbers : Integer (5), Float (3.14)
+c. Boolean : true/false
+d. Null : null
+e. Array : ["Apel", "Strowberry", "Pisang"]
+f. Object : name-value pairs seperti example.json
+
+Nested Struktur JSON
