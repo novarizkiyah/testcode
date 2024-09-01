@@ -22,3 +22,12 @@ e. Array : ["Apel", "Strowberry", "Pisang"]
 f. Object : name-value pairs seperti example.json
 
 Nested Struktur JSON
+a. Bagaimana cara bikin komplesk sturktur JSIN yang mengizinkan nesting/jaring object dan array
+contoh: nested.json and nested2.json
+
+b. Best practices untuk organisasi data
+1. Pake clear, deskriptif nama untuk keys
+2. Jaga struktur file as flat as possible untuk simpler data
+3. Gunakan arrays untuk list item yang sama
+4. Group berdasarkan data ke nested objects
+5. Konsisten dengan naming conventions dan struktur accross similar data
