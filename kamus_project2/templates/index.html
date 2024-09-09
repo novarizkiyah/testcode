@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Proyek Kamus</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Proyek Kamus</h1>
+        
+        <form action="{{ url_for('add_word') }}" method="post">
+            <input type="text" name="word" placeholder="Kata" required>
+            <input type="text" name="definition" placeholder="Definisi" required>
+            <button type="submit">Tambah Kata</button>
+        </form>
+
+        <h2>Daftar Kata</h2>
+        <table>
+            <tr>
+                <th>Kata</th>
+                <th>Definisi</th>
+            </tr>
+            {% for word, definition in words.items() %}
+            <tr>
+                <td>{{ word }}</td>
+                <td>{{ definition }}</td>
+            </tr>
+            {% endfor %}
+        </table>
+    </div>
+</body>
+</html>
