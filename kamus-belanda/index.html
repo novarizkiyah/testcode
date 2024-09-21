@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kamus Belanda-Indonesia</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #f4f4f4;
+        }
+        .container {
+            max-width: 600px;
+            margin: auto;
+            padding: 20px;
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        input, button {
+            padding: 10px;
+            margin: 10px 0;
+            width: 100%;
+        }
+        button {
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Kamus Belanda - Indonesia</h1>
+
+        <h3>Tambah Kalimat</h3>
+        <input type="text" id="kalimatBelanda" placeholder="Kalimat Bahasa Belanda">
+        <input type="text" id="terjemahanIndonesia" placeholder="Terjemahan Bahasa Indonesia">
+        <button onclick="tambahKalimat()">Tambah</button>
+
+        <h3>Cari Terjemahan</h3>
+        <input type="text" id="cariKalimatBelanda" placeholder="Kalimat Bahasa Belanda">
+        <button onclick="cariKalimat()">Cari</button>
+        <p id="hasilCari"></p>
+
+        <h3>Kuis Acak</h3>
+        <button onclick="quizAcak()">Mulai Kuis</button>
+        <p id="soalQuiz"></p>
+        <p id="jawabanQuiz"></p>
+    </div>
+
+    <script>
+        async function tambahKalimat() {
+            const kalimatBelanda = document.getElementById('kalimatBelanda').value;
+            const terjemahanIndonesia = document.getElementById('terjemahanIndonesia').value;
+
+            const response = await fetch('http://127.0.0.1:5000/tambah', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({ kalimat_belanda: kalimatBelanda, terjemahan_indonesia: terjemahanIndonesia })
+            });
+            
+            const result = await response.json();
+            alert(result.message);
+        }
+
+        async function cariKalimat() {
+            const kalimatBelanda = document.getElementById('cariKalimatBelanda').value;
+            const response = await fetch(`http://127.0.0.1:5000/cari?kalimat_belanda=${kalimatBelanda}`);
+            
+            const result = await response.json();
+            if (result.error) {
+                document.getElementById('hasilCari').textContent = result.error;
+            } else {
+                document.getElementById('hasilCari').textContent = `Terjemahan: ${result.terjemahan_indonesia}`;
+            }
+        }
+
+        async function quizAcak() {
+            const response = await fetch('http://127.0.0.1:5000/quiz');
+            const result = await response.json();
+
+            if (result.error) {
+                document.getElementById('soalQuiz').textContent = result.error;
+            } else {
+                document.getElementById('soalQuiz').textContent = `Kalimat: ${result.kalimat_belanda}`;
+                document.getElementById('jawabanQuiz').textContent = `Terjemahan: ${result.terjemahan_indonesia}`;
+            }
+        }
+    </script>
+</body>
+</html>
