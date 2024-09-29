@@ -27,6 +27,9 @@ my_go_to_places.reverse()
 print(my_go_to_places)
 
 #9. Use sort() to change your list so it's stored in alphabetical order. Print the list to show that its order has been changed.
-
+my_go_to_places.sort()
+print(my_go_to_places)
 
 #10. Use sort() to change your list so it's stored in reverse-alphabetical order. Ptint the list to show that its order has changed.
+my_go_to_places.sort(reverse=True)
+print(my_go_to_places)
