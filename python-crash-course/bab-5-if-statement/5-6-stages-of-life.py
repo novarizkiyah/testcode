@@ -11,3 +11,21 @@
 # 4. If the person is more than 20 years old but less than 65, print a message that the person is an adult
 
 # 5. If the person is more than 65, print a message that the person is an elder
+
+print("How old your age?")
+age = int(input())
+
+if age<=2:
+    print("this is a baby")
+elif age>2 and age<=4:
+    print("this is a toddler") 
+elif 4<age<=13:
+    print("this is a kid")
+elif 13<age<=20:
+    print("this is a teenager")
+elif 20<age<=65:
+    print("this is an adult")
+else:
+    print("this is an elder")
+
+
