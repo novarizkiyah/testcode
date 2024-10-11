@@ -8,10 +8,6 @@
 
 alien_colors = ["green", "yellow", "red"]
 
-if "green" in alien_colors:
-    print("You just earn 5 points")
-if "green" not in alien_colors:
-    print("You just earn 10 points")
 
 if "green" in alien_colors:
     print("You just earn 5 points")
