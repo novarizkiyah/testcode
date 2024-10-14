@@ -10,3 +10,5 @@ identity = {
 }
 
 print(identity)
+
+print("First name :", identity['first name'])
