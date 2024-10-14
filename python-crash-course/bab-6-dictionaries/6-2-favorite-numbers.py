@@ -12,3 +12,6 @@ favorite_numbers = {
 number = favorite_numbers['nova']
 print(favorite_numbers)
 print(f"Nova favorite number is {number}")
+
+for k, v in favorite_numbers.items():
+    print(f"{k.title()} favorite number is {v}")
