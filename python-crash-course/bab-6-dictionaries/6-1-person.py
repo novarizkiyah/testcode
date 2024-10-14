@@ -11,4 +11,7 @@ identity = {
 
 print(identity)
 
-print("First name :", identity['first name'])
+print("First name :", identity['first name'].title())
+print("Last name :", identity['last_name'].title())
+print("Age :", identity['age'])
+print("City :", identity['city'].title())
