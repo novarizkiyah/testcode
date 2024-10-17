@@ -4,11 +4,11 @@
 
 # 2. Remove all of the usernames from your list and make sure the correct message is printed.
 
+
 usernames = []
 
 if usernames:
     for username in usernames:
-            print(f"Adding {username}")
-    print("Add admin")
+        print(f"Hello, {username.title()}")
 else:
-    print("We need find some users")
+    print("We need to find some users ")
