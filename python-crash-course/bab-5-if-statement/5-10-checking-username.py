@@ -12,24 +12,14 @@
 # If 'John' has been used, 'JOHN' should not be accepted.
 # (To do this, you'll need to make a copy of current_users containing the lowercase versions of all existing users.)
 
-current_users = ["nova", "aryya", "aya", "lek pong", "pakde"]
-new_users = ["nova", "anisa", "maharani", "pinkan", "pakde"]
+current_users = ["John", "Sandy", "melk", "Mikael", "Abraham"]
+convert_users = [user.lower() for user in current_users]
+
+new_users = ["JOHN", "Merata", "Maharini", "SANDY", "Suci"]
+
 
 for new_user in new_users:
-    if new_user in current_users:
-        print(f"Hello {new_user} please use another name")
+    if new_user.lower() in convert_users:
+        print(f"Hello {new_user}, pleased used another name")
     else:
-        print("username is available")
-
-current_users_2 = ["John", "Sandy", "melk", "mikael", "abraham"]
-convert_users_2 = [user.lower() for user in current_users_2]
-print(convert_users_2)
-
-
-new_users_2 = ["JOHN", "Merata", "Maharini", "Suci", "SANDY"]
-
-for new_user_2 in new_users_2:
-    if new_user_2.lower() in convert_users_2:
-        print(f"Hello {new_user_2} please used another name")
-    else:
-        print("username still available")
+        print(f"Username {new_user} still available")
