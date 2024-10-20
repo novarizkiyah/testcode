@@ -17,6 +17,9 @@ favorite_language = {
     'ramanujan' : 'java'
 }
 
+for name, language in favorite_language.items():
+    print(f"{name.title()}'s favorite language is {language.title()}")
+
 friends = ['nova', 'ramanujan']
 
 for name in favorite_language.keys():
