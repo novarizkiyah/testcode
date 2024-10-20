@@ -10,5 +10,24 @@ glossary = {
 }
 
 # Print each word with its meaning and a blank line in between
-for word, meaning in glossary.items():
-    print(f"{word}: {meaning}\n")
+
+word = 'Variable'
+print(f"{word} : " + glossary[word])
+
+word = 'Function'
+print(f"{word} : " + glossary[word])
+
+word = 'Loop'
+print(f"{word} : " + glossary[word])
+
+word = 'List'
+print(f"{word} : " + glossary[word])
+
+word = 'Dictionary'
+print(f"{word} : " + glossary[word])
+
+
+
+
+#for word, meaning in glossary.items():
+#    print(f"{word}: {meaning}\n")
