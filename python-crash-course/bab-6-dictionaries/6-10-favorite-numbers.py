@@ -8,5 +8,7 @@ favorite_numbers = {
 }
 
 # Correct way to iterate over the dictionary
-for name, places in favorite_places.items():  # Use .items() to get both key and value
-    print(name)
+for name, numbers in favorite_numbers.items(): 
+    print(f"My name is {name.title()} and my favorite number is")
+    for number in numbers:
+        print(f"\t {number}")
