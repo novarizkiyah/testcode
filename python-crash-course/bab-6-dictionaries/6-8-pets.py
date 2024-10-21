@@ -30,11 +30,11 @@ pets_3 = {
     'owner' : 'rahmat',
 }
     
-pets = ['pets_1', 'pets_2', 'pets_3']
+pets = [pets_1, pets_2, pets_3]
 
 for pet in pets:
     print(
-        f"My pate name is {pet['name']},",
-        f"it is a {pet['animal']}, ",
-        f"then the owner name's {pet['owner']}"         
+        f"My pate name is {pet['name'].title()},",
+        f"it is a {pet['animal']},",
+        f"then the owner name's {pet['owner'].title()}"         
     )
