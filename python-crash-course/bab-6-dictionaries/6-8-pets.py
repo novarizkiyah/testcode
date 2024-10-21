@@ -9,3 +9,32 @@
 # that information should really be included in the dictionary, 
 # rather than being used as the name of the dictionary. 
 # This solution reflects that approach.
+
+
+pets_1 = {
+    'name' : 'doggy',
+    'animal' : 'dog',
+    'owner' : 'bastian',
+}
+
+pets_2 = {
+    'name' : 'kitty',
+    'animal' : 'cat',
+    'owner' : 'nova',
+
+}
+
+pets_3 = {
+    'name' : 'sniky',
+    'animal' : 'snake',
+    'owner' : 'rahmat',
+}
+    
+pets = ['pets_1', 'pets_2', 'pets_3']
+
+for pet in pets:
+    print(
+        f"My pate name is {pet['name']},",
+        f"it is a {pet['animal']}, ",
+        f"then the owner name's {pet['owner']}"         
+    )
