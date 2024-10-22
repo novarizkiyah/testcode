@@ -2,6 +2,7 @@
 #When you’re sure that your loop works, add five more Python terms to your glossary. 
 #When you run your program again, these new words and meanings should automatically be included in the output.
 
+
 glossary = {
     "Variable": "A named location used to store data in memory.",
     "Function": "A block of code that performs a specific task when called.",
@@ -11,4 +12,4 @@ glossary = {
 }
 
 for key, value in glossary.items():
-    print(f" {key} : {value}")
+    print(f"{key} : {value}")
