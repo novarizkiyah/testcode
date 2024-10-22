@@ -4,14 +4,12 @@
 
 identity = {
     'first name' : 'nova',
-    'last_name' : 'rizkiyah',
+    'last name' : 'rizkiyah',
     'age' : 31,
     'city' : 'rotterdam'
 }
 
-print(identity)
 
-print("First name :", identity['first name'].title())
-print("Last name :", identity['last_name'].title())
-print("Age :", identity['age'])
-print("City :", identity['city'].title())
+print(f"Hello, My name is {identity['first name'].title()} {identity['last name'].title()}")
+print(f"I'm {identity['age']} years old")
+print(f"I lived in {identity['city'].title()}")
