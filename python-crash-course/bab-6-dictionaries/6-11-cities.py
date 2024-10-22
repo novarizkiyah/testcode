@@ -22,7 +22,7 @@ cities = {
     }
 }
 
-for country, country_info in cities.items():
-    print(f"Cities : {country.title()}")
-    for con, info in country_info.items():
-        print(f"\t {con.title()}: {info}")
+for city, city_info in cities.items():
+    print(f"{city.title()}")
+    for info, detail in city_info.items():
+        print(f"{info} : {detail}")
