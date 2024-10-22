@@ -7,17 +7,18 @@
 
 '''
     
-Rivers_flow_in_you = {
-    "Nile" : "Egypt",
-    "gangga" : "India",
-    "Aare" : "Swizzerland"
-}
+rivers = {
+    'nile' : 'egypt',
+    'gangga' : 'india',
+    'aare' : 'swis'
+    }
 
-for river, country in Rivers_flow_in_you.items():
-    print(f"{river} run through {country}")
+for river, country in rivers.items():
+    print(f"The {river.title()} through {country.title()}")
 
-for river in Rivers_flow_in_you:
-    print(river)
+for river in rivers.keys():
+    print(river.title())
 
-for country in Rivers_flow_in_you:
-    print(country)
+for country in rivers.values():
+    print(country.title())
+
