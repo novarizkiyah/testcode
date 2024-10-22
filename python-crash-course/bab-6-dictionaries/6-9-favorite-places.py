@@ -5,13 +5,12 @@
 
 favorite_places = {
     'nova': ['jogja', 'jakarta', 'paris'],
-    'mew': ['solo', 'madiun', 'mekkah'],
+    'mew':['solo', 'madiun', 'mekkah'],
     'rina': ['madinah', 'bern', 'osaka']
 }
 
 for name, places in favorite_places.items():
-    print(f"My name is {name.title()} and my favorite places: ")
+    print(f"My name is {name.title()}")
+    print(f"My favorite places:")
     for place in places:
         print(f"\t {place.title()}")
-
-
