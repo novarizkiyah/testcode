@@ -17,13 +17,10 @@ favorite_language = {
     'ramanujan' : 'java'
 }
 
+friends = ['sarah', 'ramanujan']
+
 for name, language in favorite_language.items():
-    print(f"{name.title()}'s favorite language is {language.title()}")
-
-friends = ['nova', 'ramanujan']
-
-for name in favorite_language.keys():
     if name in friends:
-        print(f"Hello {name.title()}, thank you to get the pool")
+        print(f"Hi, {name.title()}, thank you for taking the poll")
     else:
-        print(f"Hello {name.title()}, please take our pool")
+        print(f"{name.title()}, please taking the poll")
