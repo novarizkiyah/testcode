@@ -3,3 +3,11 @@
 # Add code near the beginning of your program to print a message saying the deli has run out of pastrami, 
 # and then use a while loop to remove all occurences of 'pastrami' from sandwich_orders. 
 # Make sure no pastrami sandwiches end up in finished_sandiches.
+
+sandwich_orders = ['sandwich A', 'pastrami', 'sandwich B', 'pastrami','sandwich C', 'pastrami']
+print(sandwich_orders)
+
+while 'pastrami' in sandwich_orders:
+    sandwich_orders.remove('pastrami')
+
+print(sandwich_orders)
