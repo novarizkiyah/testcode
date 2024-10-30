@@ -2,8 +2,7 @@
 # If the answer is more than eight, print a message saying they’ll have to wait for a table. 
 # Otherwise, report that their table is ready.
 
-message = input("How many people in dinner group? ")
-number = int(message)
+number = int(input("How many people in your dinner group?"))
 
 if number > 8:
     print("You have to wait")
