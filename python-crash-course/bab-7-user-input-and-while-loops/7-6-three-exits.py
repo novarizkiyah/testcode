@@ -9,24 +9,21 @@
 active = True
 
 while active:
-    user_input = input("How old are you? (please type 'quit' to quit)")
-
+    user_input = input("How old are you?, write 'quit' to exit ")
     if user_input.lower() == 'quit':
         active = False
-        print("Thank you!")
+        print("Thank you for using this code")
         break
-
     try:
         number = int(user_input)
         if 0 < number <= 3:
-            print("The ticket is free.")
-        elif 3 < number < 12:
-            print("The ticket is $10.")
+            print("The ticket is free")
+        elif 3 < number <= 12:
+            print("the ticket is $10")
         else:
-            print("The ticket is $15.")
+            print("the ticket is $15")
     except ValueError:
-        print("Please enter a valid age or 'quit' to exit.")
-
+        print("Please enter a valid response, like number or 'quit'")
 
 
 
