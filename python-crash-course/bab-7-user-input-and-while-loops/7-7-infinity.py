@@ -1,7 +1,7 @@
 # write a loop that never ends, and run it
 #to end the loop, press CTRL+C 
 
-x = 4
+number = 3
 
-while x<=6:
-    print("hello")
+while number < 5:
+    print(number)
