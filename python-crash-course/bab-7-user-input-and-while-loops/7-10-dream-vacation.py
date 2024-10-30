@@ -4,14 +4,14 @@
  
 responses = []
 
-polling_active = True
+polling = True
 
-while polling_active:
-    response = input("If you could visit one place in the world, where would you go?")
+while polling:
+    response = input("If you could visit one place, where would you go? ")
     if response.lower() == 'quit':
         break
     else:
         responses.append(response)
 
 for response in responses:
-    print(response)
+    print(f"I will visit {response.title()}")
