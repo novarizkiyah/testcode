@@ -4,10 +4,13 @@
 # and then use a while loop to remove all occurences of 'pastrami' from sandwich_orders. 
 # Make sure no pastrami sandwiches end up in finished_sandiches.
 
-sandwich_orders = ['sandwich A', 'pastrami', 'sandwich B', 'pastrami','sandwich C', 'pastrami']
-print(sandwich_orders)
+sandwich_orders = ['lamb', 'prastami', 'prastami', 'beef', 'prastami', 'chicken', 'egg']
 
-while 'pastrami' in sandwich_orders:
-    sandwich_orders.remove('pastrami')
+print("The Deli has run out of prastami")
+
+while 'prastami' in sandwich_orders:
+    sandwich_orders.remove('prastami')
 
 print(sandwich_orders)
+for sandwich_order in sandwich_orders:
+    print(f"I just only have {sandwich_order}")
