@@ -1,9 +1,11 @@
-#Make a list of magician’s names. 
-# Pass the list to a function called show_magicians(), 
-# wich prints the name of each magician in the list.
+#Make a list containing a series of short text messages
+# Pass the list to a function called show_messages(), 
+# wich prints each text messages.
 
-def show_magician(names):
-    for name in names:
-        print(name)
-magician_name = ['nova', 'novi', 'nuvo']
-show_magician(magician_name)
+def show_messages(messages):
+    for message in messages:
+        print(message)
+messages_1 = ['Hi Epriibodiihh',
+              'Hi Prabowoooooo',
+               'Hi Pusaosadakdnuvo']
+show_messages(messages_1)
