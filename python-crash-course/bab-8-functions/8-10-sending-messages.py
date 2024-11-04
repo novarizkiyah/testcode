@@ -2,3 +2,9 @@
 # Write a function called make_great() that modifies the list of magicians 
 # by adding the phrase the Great to each magician’s name. 
 # Call show_magicians() to see that the list has actually been modified.
+
+def make_great(names):
+    for name in names:
+        print(f"Hello, {name}")
+magician_name = ['nova', 'novi', 'nuvo']
+make_great(magician_name)
