@@ -10,3 +10,11 @@ from module_name import function_name as fn
 import module_name as mn
 from module_name import *
 '''
+
+import printing_function
+from printing_function import print_models
+from printing_function import print_models as pm
+import printing_function as pf
+from printing_function import *
+
+
