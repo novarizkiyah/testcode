@@ -7,3 +7,12 @@
 # car = make_car('subaru', 'outback', color='blue', tow_package=True)
 
 # Print the dictionary that’s returned to make sure all the information was stored correctly.
+
+def build_car(manufactur, model, **user_info):
+    user_info['manufacturs'] = manufactur
+    user_info['models'] = model
+    return user_info
+
+car_profile = build_car('subaru', 'outback', 
+                        color = 'blue', tow_package = True)
+print(car_profile)
