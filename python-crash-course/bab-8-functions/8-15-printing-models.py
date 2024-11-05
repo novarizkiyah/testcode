@@ -2,4 +2,14 @@
 # Write an import statement at the top of printing_models.py,
 #  and modify the file to use the imported functions.
 
-# Note: The text refers to print_models.py, but it should say printing_models.py.
+from 8-15-printing-functions import print_models, show_complete_models
+
+# Create lists of designs that need to be printed
+unprinted_designs = ['phone case', 'robot pendant', 'dodecahedron']
+completed_models = []
+
+# Simulate printing each design
+print_models(unprinted_designs, completed_models)
+
+# Display all completed models
+show_complete_models(completed_models)
