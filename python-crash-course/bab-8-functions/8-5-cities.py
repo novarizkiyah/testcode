@@ -3,9 +3,10 @@
 # Give the parameter for the country a default value. 
 # Call your function for three different cities, at least one of which is not in the default country.
 
-def describe_city(name, location):
-    print(f"{name} in {location}")
+def describe_city(city, country='Iceland'):
+    print(f"{city} is in {country}")
 
-describe_city("Reykjavik", "Iceland")
-describe_city("Amsterdam", "Netherland")
-describe_city("Bandung", "West Java")
+describe_city(city='Reykjavik')
+describe_city('City A')
+describe_city(city="Jakarta", country="Indonesia")
+describe_city(city='Amsterdam', country='the Netherlands')
