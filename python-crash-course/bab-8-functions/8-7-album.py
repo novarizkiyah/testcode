@@ -8,18 +8,16 @@
 # If the calling line includes a value for the number of tracks, add that value to the album’s dictionary. 
 # Make at least one new function call that includes the number of tracks on an album.
 
-def make_album(artis, album, tracks = None):
-    info = {'name':artis, 'name album': album}
+def make_album(artist, album, tracks=None):
+    info = {'artist name' : artist, 'album name' : album}
     if tracks:
-        info['tracks']= tracks
+        info['tracks'] = tracks
     return info
 
-musician_1 = make_album('nova', 'sd', tracks=34)
-musician_2 = make_album('novi', 'wfc')
-musician_3 = make_album('nuvo', 'dsf', tracks=13)
-print(musician_1)
-print(musician_2)
-print(musician_3)
+print(make_album('Taylor Swift', '1989'))
+print(make_album('Paramore', 'Album 4', '4'))
+print(make_album('Sheila on 7', 'Album 1', '7'))
+
 
 
 
