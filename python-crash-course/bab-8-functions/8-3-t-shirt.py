@@ -7,13 +7,16 @@
 # Call the function a second time using keyword arguments.
 
 # Positional argument
-def make_shirt(size, sentences):
-    print(f"My size is {size} so {sentences}")
+def make_shirt(size, message):
+    print(f"{size} : {message}")
 
-make_shirt("S", "this is cute")
+make_shirt("S", "Small")
+make_shirt("M", "Medium")
+make_shirt("Small", "S")
 
 #Keyword argument
-def make_shirt(size, sentences):
-    print(f"My size is {size} so {sentences}")
+def make_shirt(size, message):
+    print(f"{size} : {message}")
 
-make_shirt(size="S", sentences="this is cute")
+make_shirt(size="S", message="Small")
+make_shirt(message="Medium", size="M")
