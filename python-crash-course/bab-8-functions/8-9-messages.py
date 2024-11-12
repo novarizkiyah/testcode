@@ -13,3 +13,19 @@ def show_messages():
         print(message)
 
 show_messages()
+
+
+
+
+
+
+'''
+def show_messages(messages):
+    for message in messages:
+        print(message)
+messages_1 = ['Hi Epriibodiihh',
+              'Hi Prabowoooooo',
+               'Hi Pusaosadakdnuvo']
+show_messages(messages_1)
+
+'''
