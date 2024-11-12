@@ -2,10 +2,14 @@
 # Pass the list to a function called show_messages(), 
 # wich prints each text messages.
 
-def show_messages(messages):
+messages = [
+    "This is first message",
+    "The second message",
+    "Third mesages"
+]
+
+def show_messages():
     for message in messages:
         print(message)
-messages_1 = ['Hi Epriibodiihh',
-              'Hi Prabowoooooo',
-               'Hi Pusaosadakdnuvo']
-show_messages(messages_1)
+
+show_messages()
