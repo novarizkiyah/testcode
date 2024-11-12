@@ -42,6 +42,9 @@ def show_messages(done_messages):
 sent_messages(messages,done_messages)
 show_messages(done_messages)
 
+for message in messages:
+    print(f"any message {message}")
+
 
 
 
