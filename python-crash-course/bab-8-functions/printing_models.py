@@ -7,10 +7,10 @@ from printing_function import print_models, show_complete_models
 
 # Create lists of designs that need to be printed
 unprinted_designs = ['phone case', 'robot pendant', 'dodecahedron']
-completed_models = []
+# completed_models = []
 
 # Simulate printing each design
-print_models(unprinted_designs, completed_models)
+# print_models(unprinted_designs, completed_models)
 
 # Display all completed models
 show_complete_models(completed_models)
