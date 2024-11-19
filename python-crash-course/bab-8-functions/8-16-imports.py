@@ -11,10 +11,19 @@ import module_name as mn
 from module_name import *
 '''
 
-import printing_function
-from printing_function import print_models
-from printing_function import print_models as pm
-import printing_function as pf
-from printing_function import *
+import calculator_area
+print(f"Method 1 : {calculator_area.calculator(5,6)}")
+
+from calculator_area import calculator
+print(f"Method 2 : {calculator(2,4)}")
+
+from calculator_area import calculator as calc
+print(f"Method 3 : {calc(4,6)}")
+
+import calculator_area as ca 
+print(f"Method 4 : {ca.calculator(3,7)}")
+
+from calculator_area import *
+print(f"Method 5 : {calculator(2,8)}")
 
 
