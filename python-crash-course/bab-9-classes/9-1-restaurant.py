@@ -15,4 +15,11 @@ class Restaurant:
         print(f"{self.restaurant_name} is name of the restaurant")
         print(f"{self.cuisine_type} is type of cuisine")
     def open_restaurant(self):
-        print(f"the {self.restaurant_name} is open")
+        print(f"the {self.restaurant_name} is open")\
+        
+restaurant = Restaurant("Praboemoelih", "Traditional Indonesia")
+print(restaurant.restaurant_name)
+print(restaurant.cuisine_type)
+
+restaurant.describe_restaurant()
+restaurant.open_restaurant()
