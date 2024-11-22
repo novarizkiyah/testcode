@@ -1,4 +1,4 @@
-#Add an attribute called login_attempts to your User class from Exercise 9-3 (page 166). 
+#Add an attribute called login_attempts to your User class from Exercise 9-3 (page 162). 
 # Write amehtod called increment_login_attempts() that increments the value of login_attempts by 1. 
 # Write another method called reset_login_attempts() that resets the value of login_attempts to 0.
 
