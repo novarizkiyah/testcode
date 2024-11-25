@@ -4,3 +4,4 @@
 # just pick the one you like better. Add an attribute called flavors that stores a list of ice cream flavors. 
 # Write a method that displays theese flavors. 
 # Create an instance of IceCreamStand, and call this method.
+
