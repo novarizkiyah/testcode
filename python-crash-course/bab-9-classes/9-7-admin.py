@@ -5,3 +5,5 @@
 # "can delete post", "can ban user", and so on. WRite a method called show_privileges() 
 # that lists the administrator’s set of privileges. Create an instance of Admin, and call your method.
 
+
+

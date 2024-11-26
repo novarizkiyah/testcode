@@ -6,18 +6,29 @@
 # Create an instance of IceCreamStand, and call this method.
 
 class Restaurant:
-    def __init__(self, restaurant_name, cuisine_type, flavors):
+    def __init__(self, restaurant_name, cuisine_type):
         self.restaurant_name = restaurant_name
         self.cuisine_type = cuisine_type
-        self.flavors = flavors
+        
     def describe_restaurant(self):
-        info = f"{self.restaurant_name}, {self.cuisine_type}"
+        info = f"{self.restaurant_name} served {self.cuisine_type}"
         return info.title()
 
-restaurant = Restaurant('Selera Jawa', 'Java')
-print(restaurant.describe_restaurant())
+#restaurant = Restaurant('Selera Jawa', 'Java')
+#print(restaurant.describe_restaurant())
 
 class IceCreamStand(Restaurant):
-    def __init__(self, flavors):
-        super.__init__(flavors)
+    def __init__(self, restaurant_name, cuisine_type='ice cream'):
+        super().__init__(restaurant_name, cuisine_type)
+        self.flavors = []
 
+    def show_flavors(self):
+        print(f"We have ice cream list:")
+        for flavor in self.flavors:
+            print(flavor)
+
+ice_creams = IceCreamStand("Rasa Eskrim")
+ice_creams.flavors = ["vanilla", "coklat", "strowberry"]
+
+print(ice_creams.describe_restaurant())
+ice_creams.show_flavors()
