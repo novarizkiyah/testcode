@@ -29,19 +29,29 @@ class Car:
         '''Add the given amount to the odometer reading'''
         self.odometer_reading += miles
 
+class Battery:
+    '''A simple attempt to model a battery for an electic car'''
+    def __init__(self, battery_size = 40):
+        '''Initialize the battery's attributes'''
+        self.battery_size = battery_size
+    def describe_battery(self):
+        '''Print statement describing the battery size'''
+        print(f"This car has a {self.battery_size}-kWh battery")
+
 class ElecticCar(Car):
     '''Represent aspect of a car, specific to electric vehicles'''
     def __init__(self, make, model, year):
         '''Initialize attributes of the parent class'''
         super().__init__(make, model, year)
         '''Then initialize attributes to an electric car'''
-        self.battery_size = 40
+        self.battery = Battery()
 
-    def describe_battery(self):
-        '''Print statement describing the battery size'''
-        print(f"This car has a {self.battery_size}-kWh battery")
+    def fill_gas_tack(self):
+        '''Electric cars don't have gas tanks'''
+        print("This car doesn't have a gas tank")
 
 
 my_leaf = ElecticCar('Nissan', 'leaf', 2024)
 print(my_leaf.get_describe_name())
-my_leaf.describe_battery()
+my_leaf.battery.describe_battery()
+my_leaf.fill_gas_tack()
