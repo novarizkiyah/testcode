@@ -34,6 +34,14 @@ class ElecticCar(Car):
     def __init__(self, make, model, year):
         '''Initialize attributes of the parent class'''
         super().__init__(make, model, year)
+        '''Then initialize attributes to an electric car'''
+        self.battery_size = 40
+
+    def describe_battery(self):
+        '''Print statement describing the battery size'''
+        print(f"This car has a {self.battery_size}-kWh battery")
+
 
 my_leaf = ElecticCar('Nissan', 'leaf', 2024)
 print(my_leaf.get_describe_name())
+my_leaf.describe_battery()
