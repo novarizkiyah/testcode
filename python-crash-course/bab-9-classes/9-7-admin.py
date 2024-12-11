@@ -23,7 +23,14 @@ class User:
     def reset_login_attempts(self):
         self.login_attempts = 0
 class Admin(User):
-    
+    def __init__(self, first_name, last_name, email, passwords):
+        super().__init__(first_name, last_name, email, passwords)
+        self.privileges = []
+    def show_privileges(self):
+        print("Show list of privileges : ")
+        for privilege in self.privileges:
+            print(f"- {privilege}")
+
 
 user = User("Nova", "Rizkiyah", "n@gmail.com", "twauwag")
 user.describe_user()
@@ -41,3 +48,6 @@ print(f"Print the value of login : {user.login_attempts}")
 user.reset_login_attempts()
 print(f"Print value after reset : {user.login_attempts}")
 
+admin = Admin("Nova", "Rizkiyah", "n@gmail.com", "twauwag")
+admin.privileges = ['can add post', 'can delete post', 'can ban user']
+admin.show_privileges()
