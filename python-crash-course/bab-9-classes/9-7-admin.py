@@ -27,10 +27,9 @@ class Admin(User):
         super().__init__(first_name, last_name, email, passwords)
         self.privileges = []
     def show_privileges(self):
-        print("Show list of privileges : ")
+        print(f"Admin privileges : ")
         for privilege in self.privileges:
-            print(f"- {privilege}")
-
+            print(f" - {privilege}")
 
 user = User("Nova", "Rizkiyah", "n@gmail.com", "twauwag")
 user.describe_user()
@@ -49,5 +48,5 @@ user.reset_login_attempts()
 print(f"Print value after reset : {user.login_attempts}")
 
 admin = Admin("Nova", "Rizkiyah", "n@gmail.com", "twauwag")
-admin.privileges = ['can add post', 'can delete post', 'can ban user']
+admin.privileges = ["can add post", "can delete post", "can ban user"]
 admin.show_privileges()
