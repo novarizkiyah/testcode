@@ -27,9 +27,9 @@ class Admin(User):
         super().__init__(first_name, last_name, email, passwords)
         self.privileges = []
     def show_privileges(self):
-        print(f"Admin privileges : ")
+        print("Admin privileges: ")
         for privilege in self.privileges:
-            print(f" - {privilege}")
+            print(f"- {privilege}")
 
 user = User("Nova", "Rizkiyah", "n@gmail.com", "twauwag")
 user.describe_user()
