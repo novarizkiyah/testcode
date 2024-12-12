@@ -1,47 +1,66 @@
-#Write a separate Privileges class. 
+# Write a separate Privileges class. 
 # The class should have one attribute, privileges, that stores a list of strings as described in Exercise 9-7. 
 # Move the show_privileges() method to this class. 
 # Make a Privileges instance as an attribute in the Admin class. 
 # Create a new instance of Admin and use your method to show its privileges.
 
 class User:
-    def __init__(self, first_name, last_name, email):
+    def __init__(self, first_name, last_name, email, passwords):
         self.first_name = first_name
         self.last_name = last_name
         self.email = email
-
+        self.passwords = passwords
+        self.login_attempts = 0
     def describe_user(self):
-        print(f"My Data : \nName : {self.first_name} {self.last_name}\nEmail : {self.email}")
-
+        print(f"First Name : {self.first_name}")
+        print(f"Last name : {self.last_name}")
+        print(f"Email : {self.email}")
+        print(f"Passwords : {self.passwords}")
     def greet_user(self):
-        print(f"Hello {self.first_name} {self.last_name}, Good Morning!")
-
+        print(f"Hallo, {self.first_name} {self.last_name} Welcome in this site! Have a nice day!")
+    def increment_login_attempts(self):
+        self.login_attempts += 1
+    def reset_login_attempts(self):
+        self.login_attempts = 0
 class Admin(User):
-    def __init__(self, first_name, last_name, email):
-        super().__init__(first_name, last_name, email)
-        # inisiasi sebuah instance dari privileges class dengan empty list 
-        self.privileges_manager = PrivilegesManager()
-
-class PrivilegesManager:
-    def __init__(self, privileges_list=[]):
-        self.privileges_list = privileges_list
-
+    def __init__(self, first_name, last_name, email, passwords):
+        super().__init__(first_name, last_name, email, passwords)
+        self.privileges = Privileges()
+  
+class Privileges:
+    def __init__(self, privileges=[]):
+        self.privileges = privileges
     def show_privileges(self):
-        print("Privileges : ")
-        if self.privileges_list:
-            for privilege in self.privileges_list:
-                print(f" - {privilege}")
+        print("Admin privileges: ")
+        if self.privileges:
+            for privilege in self.privileges:
+                print(f"- {privilege}")
         else:
-            print(f" - This user has no privileges")
+            print(" - This user has no privileges")
+user = User("Nova", "Rizkiyah", "n@gmail.com", "twauwag")
+user.describe_user()
+user.greet_user()
 
-priv = Admin("Nova", "Rizkiyah", "n@gmail.com")
-priv.describe_user()
-priv.greet_user()
+#Make an instance of the User class and call increment_login_attempts() several times. 
+user.increment_login_attempts()
+user.increment_login_attempts()
+user.increment_login_attempts()
+user.increment_login_attempts()
+user.increment_login_attempts()
+user.increment_login_attempts()
+print(f"Print the value of login : {user.login_attempts}")
 
-priv.privileges_manager.show_privileges()
+user.reset_login_attempts()
+print(f"Print value after reset : {user.login_attempts}")
 
-print(f"Adding privileges:")
-admin_privileges = ["can add post", "can delete post", "can ban post"]
+admin = Admin("Nova", "Rizkiyah", "n@gmail.com", "twauwag")
 
-priv.privileges_manager.privileges_list = admin_privileges
-priv.privileges_manager.show_privileges()
+# admin.show_privileges()
+
+admin.describe_user()
+admin.privileges.show_privileges()
+
+print("Adding privileges")
+admin_privileges = ["can add post", "can delete post", "can ban user"]
+admin.privileges.privileges = admin_privileges
+admin.privileges.show_privileges()
