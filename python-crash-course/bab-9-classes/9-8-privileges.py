@@ -25,18 +25,18 @@ class User:
 class Admin(User):
     def __init__(self, first_name, last_name, email, passwords):
         super().__init__(first_name, last_name, email, passwords)
-        self.privileges = Privileges()
-  
+        self.privileges_manager = Privileges()
 class Privileges:
-    def __init__(self, privileges=[]):
-        self.privileges = privileges
+    def __init__(self):
+        self.privileges_list = []
     def show_privileges(self):
         print("Admin privileges: ")
-        if self.privileges:
-            for privilege in self.privileges:
+        if self.privileges_list:
+            for privilege in self.privileges_list:
                 print(f"- {privilege}")
         else:
-            print(" - This user has no privileges")
+            print("This user has no previleges")
+
 user = User("Nova", "Rizkiyah", "n@gmail.com", "twauwag")
 user.describe_user()
 user.greet_user()
@@ -54,13 +54,7 @@ user.reset_login_attempts()
 print(f"Print value after reset : {user.login_attempts}")
 
 admin = Admin("Nova", "Rizkiyah", "n@gmail.com", "twauwag")
+admin.privileges_manager.show_privileges()
 
-# admin.show_privileges()
-
-admin.describe_user()
-admin.privileges.show_privileges()
-
-print("Adding privileges")
-admin_privileges = ["can add post", "can delete post", "can ban user"]
-admin.privileges.privileges = admin_privileges
-admin.privileges.show_privileges()
+admin.privileges_manager.privileges_list = ["can add post", "can delete post", "can ban user"]
+admin.privileges_manager.show_privileges()
