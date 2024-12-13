@@ -35,7 +35,7 @@ class Privileges:
             for privilege in self.privileges_list:
                 print(f"- {privilege}")
         else:
-            print("This user has no previleges")
+            print("This user has no privileges")
 
 user = User("Nova", "Rizkiyah", "n@gmail.com", "twauwag")
 user.describe_user()
@@ -54,6 +54,7 @@ user.reset_login_attempts()
 print(f"Print value after reset : {user.login_attempts}")
 
 admin = Admin("Nova", "Rizkiyah", "n@gmail.com", "twauwag")
+
 admin.privileges_manager.show_privileges()
 
 admin.privileges_manager.privileges_list = ["can add post", "can delete post", "can ban user"]
