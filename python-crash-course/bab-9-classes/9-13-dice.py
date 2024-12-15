@@ -1,9 +1,6 @@
-# Start with Exercise 6-4 (page 108), 
-# where you used a standard dictionary to represent a glossary. 
-# Rewrite the program using the OrderedDict class 
-# and make sure the order of the output matches the order 
-# in which key-value pairs were added to the dictionary.
+# Make a class Die with one attribute called sides, 
+# which has a default value of 6. 
+# Write a method called roll_die() that prints a random number between 1 and the number of sides the die has. 
+# Make a 6-sided die and roll it 10 times.
 
-# Note: In Python 3.6, dictionaries store keys in order. 
-# However, this is not guaranteed to work in all versions of Python, 
-# so you should still use an OrderedDict when you need key-value pairs to be stored in a particular order.
+# Make a 10-sided die and a 20-sided die. Roll each die 10 times.
