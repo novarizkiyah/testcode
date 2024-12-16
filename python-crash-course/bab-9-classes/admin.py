@@ -30,4 +30,3 @@ class Privileges:
                 print(f"- {privilege}")
         else:
             print("This user has no privileges")
-

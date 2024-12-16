@@ -2,6 +2,7 @@
 # Privileges and Admin in one module. Create a separate file, 
 # make an Admin instance, 
 # and call show_priveleges() to show that everything is working correctly.
+
 class User:
     def __init__(self, first_name, last_name, email, passwords):
         self.first_name = first_name
@@ -40,8 +41,9 @@ user.describe_user()
 user.greet_user()
 
 #Make an instance of the User class and call increment_login_attempts() several times. 
-for x in range (6):
+for x in range(6):
     user.increment_login_attempts()
+
 print(f"Print the value of login : {user.login_attempts}")
 
 user.reset_login_attempts()
