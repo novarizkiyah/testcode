@@ -1,7 +1,7 @@
 
-import admin
+import adminx
 
-user = admin.User("Nova", "Rizkiyah", "n@gmail.com", "twauwag")
+user = adminx.User("Nova", "Rizkiyah", "n@gmail.com", "twauwag")
 user.describe_user()
 user.greet_user()
 
@@ -14,9 +14,9 @@ print(f"Print the value of login : {user.login_attempts}")
 user.reset_login_attempts()
 print(f"Print value after reset : {user.login_attempts}")
 
-admin = admin.Admin("Nova", "Rizkiyah", "n@gmail.com", "twauwag")
+adminx = adminx.Admin("Nova", "Rizkiyah", "n@gmail.com", "twauwag")
 
-admin.privileges_manager.show_privileges()
+adminx.privileges_manager.show_privileges()
 
-admin.privileges_manager.privileges_list = ["can add post", "can delete post", "can ban user"]
-admin.privileges_manager.show_privileges()
+adminx.privileges_manager.privileges_list = ["can add post", "can delete post", "can ban user"]
+adminx.privileges_manager.show_privileges()

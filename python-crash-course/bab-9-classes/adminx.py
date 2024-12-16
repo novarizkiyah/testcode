@@ -1,8 +1,3 @@
-# Store the User class in one module, 
-# and store the Privileges and Admin classes in a separate module. 
-# In a separate file, create an Admin instance and call show_privileges() 
-# to show that everything is still working correctly.
-
 class User:
     def __init__(self, first_name, last_name, email, passwords):
         self.first_name = first_name
@@ -35,23 +30,3 @@ class Privileges:
                 print(f"- {privilege}")
         else:
             print("This user has no privileges")
-
-user = User("Nova", "Rizkiyah", "n@gmail.com", "twauwag")
-user.describe_user()
-user.greet_user()
-
-#Make an instance of the User class and call increment_login_attempts() several times. 
-for x in range(6):
-    user.increment_login_attempts()
-
-print(f"Print the value of login : {user.login_attempts}")
-
-user.reset_login_attempts()
-print(f"Print value after reset : {user.login_attempts}")
-
-admin = Admin("Nova", "Rizkiyah", "n@gmail.com", "twauwag")
-
-admin.privileges_manager.show_privileges()
-
-admin.privileges_manager.privileges_list = ["can add post", "can delete post", "can ban user"]
-admin.privileges_manager.show_privileges()

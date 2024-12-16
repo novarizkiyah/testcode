@@ -5,7 +5,7 @@
 
 from random import choice
 
-num_let = [1,2,3,4,5,6,7,8,9,10,'z', 'y','x','v','w']
+num_let = [1,2,3,4,5,6,7,8,9,10,'z','y','x','v','w']
 winning_ticket = []
 print("Who is the winner?")
 
