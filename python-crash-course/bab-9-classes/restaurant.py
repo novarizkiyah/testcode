@@ -20,4 +20,3 @@ class IceCreamStand(Restaurant):
         print("Our Ice Cream : ")
         for flavor in self.flavors:
             print(f"- {flavor}")
-
