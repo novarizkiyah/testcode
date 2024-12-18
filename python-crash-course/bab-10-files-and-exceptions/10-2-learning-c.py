@@ -9,3 +9,11 @@
 # and replace the word Python with the name of another language, such as C. 
 # Print each modified line to the screen.
 
+from pathlib import Path
+path = Path('learning_python.txt')
+contents = path.read_text()
+
+lines = contents.splitlines()
+for line in lines:
+    line = line.replace('Python', 'C')
+    print(line)
