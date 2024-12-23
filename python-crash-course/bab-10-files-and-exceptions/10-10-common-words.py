@@ -1,4 +1,5 @@
-# Visit Project Gutenberg and find a few texts you'd like to analyze. 
+# Visit Project Gutenberg (https://gutenberg.org)
+# and find a few texts you'd like to analyze. 
 # Download the text files for these works, 
 # or copy the raw text from your browser into a text file on your computer.
 
@@ -24,3 +25,21 @@
 # This will be an approximation because it will also count words such as 'then' 
 # and 'there'. Try counting 'the ', with a space in the string, 
 # and see how much lower your count is.
+
+from pathlib import Path
+
+path = Path("gutenberg.txt")
+
+try:
+    contents = path.read_text(encoding='utf-8')
+
+except FileNotFoundError:
+    print(f"Sorry, the {path} does not exist")
+
+else:
+    #Count -the- in the text
+    words = contents.split()
+    num_words = len(words)
+    print(f"The file {path} has {num_words} words.")
+    the_words = contents.lower().count('the ')
+    print(f"How much 'the' in {path}? {the_words}")
