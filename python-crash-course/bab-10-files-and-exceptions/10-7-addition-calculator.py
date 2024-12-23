@@ -17,3 +17,4 @@ while True:
         print("\n You must input number!")
     else:
         print(f"\n sum : {sum}")
+
