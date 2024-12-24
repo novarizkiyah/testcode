@@ -1,6 +1,8 @@
 In Python you can make everything
-From Data to Devops
-From easy to hard
-everything in Python
-and I can see myself 
-growing like Python community grow
+It is 'easy' programming laguage
+But, somehow its hard to understand
+In Python you can learn anything
+from machine learning, web development, etc
+You can be everything
+But, I can see myself grow if I continue to learn Python
+That's why I love Python: make it simple, make it works! 
