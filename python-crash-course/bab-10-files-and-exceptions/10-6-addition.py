@@ -8,15 +8,15 @@
 # Test your program by entering two numbers and then by entering some text 
 # instead of a number.
 
-print("\n Give me 2 numbers")
-print("\n Enter q to quit")
-first_number = input("\n Your first number: ")
-second_number = input("\n Your second number: ")
 
-try:
-    sum = int(first_number) + int(second_number)
+print("Please input 2 numbers")
+number_one = input("What is your number one? ")
+number_two = input("What is your second number? ")
+
+try: 
+    sum = int(number_one)+ int(number_two)
 except ValueError:
-    print("\n You must input number!")
+    print("Please input numbers!")
 else:
-    print(f"\n sum : {sum}")
+    print(f"The addition is : {sum}")
 
