@@ -5,21 +5,17 @@
 
 from pathlib import Path
 
-
-guest_name = []
-
+guest_list = []
+path = Path("guest_book.txt")
 while True:
-    content = input("What is your name? 'quit' to exit")
-    
+    content = input("What is your name? type 'quit' to exit ")
     if content == 'quit':
         break
-    guest_name.append(content)
+    else:
+        print(f"We will add {content} to our guest list")
+        guest_list.append(content)
 
-
-file_string = ''
-for content in guest_name:
-    file_string += f"{content}\n"
-
-
-path = Path('guest_book.txt')
-path.write_text(file_string)
+string = ""
+for content in guest_list:
+    string += f"{content.title()}\n"
+path.write_text(string)
