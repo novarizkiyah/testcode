@@ -2,3 +2,18 @@
 # If the number is already stored, report the favorite number to the user. 
 # If not, prompt for the user's favorite number and store it in a file. 
 # Run the program twice to see that it works.
+
+from pathlib import Path
+import json
+
+path = Path('number.json')
+try: 
+    contents = path.read_text()
+except FileNotFoundError:
+    favorite_number = input("What's your favorite number? ")
+    contents = json.dumps(favorite_number)
+    path.write_text(contents)
+else:
+    favorite_number = json.loads(contents)
+    print(f"I know your favorite number is {favorite_number}")
+

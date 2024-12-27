@@ -6,8 +6,10 @@
 from pathlib import Path
 import json
 
-numbers = [7, 17, 9, 6, 11, 4]
+number = input("What is your favorite number? ")
 
 path = Path('numbers.json')
-contents = json.dumps(numbers)
+contents = json.dumps(number)
 path.write_text(contents)
+
+print(f"I know your favorite number is {number}")
