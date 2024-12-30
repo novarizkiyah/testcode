@@ -12,11 +12,11 @@ from pathlib import Path
 
 filenames = ['cats.txt', 'dogs.txt']
 for filename in filenames:
-    print(f"Reading file : {filename}")
     path = Path(filename)
+    print(f"Reading file : {filename}")
     try:
         content = path.read_text()
     except FileNotFoundError:
-        print(f"The {path} is missing")
+        print(f"The {filename} is missing")
     else:
         print(content)

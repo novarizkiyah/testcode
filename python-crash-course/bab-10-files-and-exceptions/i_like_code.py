@@ -64,3 +64,39 @@ if birthday in pi_string:
 else:
     print("Your birthday does not appear in the first million digits of pi.")
 
+from pathlib import Path
+
+content = input("What is your name? ")
+path = Path('guest.txt')
+path.write_text(content)
+
+from pathlib import Path
+
+guest_name = []
+while True:
+    content = input("What is your name? 'quit' to exit ")
+    if content == 'quit':
+        break
+    print(f"We will add {content} to the guest book")
+    guest_name.append(content)
+
+file_string = ''
+for content in guest_name:
+    file_string += f"{content}\n"
+
+path = Path('guest_book.txt')
+path.write_text(file_string)
+
+
+from pathlib import Path
+
+filenames = ['cats.txt', 'dogs.txt']
+for filename in filenames:
+    print(f"Reading file : {filename}")
+    path = Path(filename)
+    try:
+        content = path.read_text()
+    except FileNotFoundError:
+        print(f"The {path} is missing")
+    else:
+        print(content)
