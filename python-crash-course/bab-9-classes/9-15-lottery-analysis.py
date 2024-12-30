@@ -18,11 +18,16 @@ def get_winning_ticket(possibilites):
 
 def check_ticket(played_ticket, winning_ticket):
     '''Check element. If element not in the winning ticket, return False'''
+    '''
     for element in played_ticket:
         if element not in winning_ticket:
             return False
-    '''We must have a winning ticket'''
     return True
+    '''
+    return played_ticket == winning_ticket
+
+    
+   
 
 def make_random_ticket(possibilites):
     '''Return a random ticket from a set of possibilities.'''
