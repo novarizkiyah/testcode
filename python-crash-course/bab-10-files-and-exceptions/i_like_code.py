@@ -100,3 +100,15 @@ for filename in filenames:
         print(f"The {path} is missing")
     else:
         print(content)
+
+from pathlib import Path
+filenames = ['cats.txt', 'dogs.txt']
+for filename in filenames:
+    print(f"Reading file : {filename}")
+    path = Path(filename)
+    try:
+        content = path.read_text()
+    except FileNotFoundError:
+        pass
+    else:
+        print(content)
