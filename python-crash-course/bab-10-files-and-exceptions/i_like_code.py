@@ -112,3 +112,32 @@ for filename in filenames:
         pass
     else:
         print(content)
+
+from pathlib import Path
+
+path = Path("gutenberg.txt")
+
+try:
+    contents = path.read_text(encoding='utf-8')
+
+except FileNotFoundError:
+    print(f"Sorry, the {path} does not exist")
+
+else:
+    #Count -the- in the text
+    words = contents.split()
+    num_words = len(words)
+    print(f"The file {path} has {num_words} words.")
+    the_words = contents.lower().count('the ')
+    print(f"How much 'the' in {path}? {the_words}")
+
+from pathlib import Path
+import json
+
+number = input("What is your favorite number? ")
+
+path = Path('numbers.json')
+contents = json.dumps(number)
+path.write_text(contents)
+
+print(f"I know your favorite number is {number}")

@@ -1,8 +1,8 @@
 from pathlib import Path
+import json
 
-path = Path('numbers.json')
+path = Path("number.json")
 contents = path.read_text()
-lines = contents.splitlines()
-for line in lines:
-    print(line)
-print(f"I know your favorite number is {contents}")
+numbers = json.loads(contents)
+
+print(f"I know your favorite number! It's {numbers}")
